@@ -21,7 +21,6 @@ subNoCap vSub xSub xx0
              -> XVar vRewrite
 
              | v == vSub      -> xSub
-
              | otherwise      -> xx
 
             XAbs v x1
