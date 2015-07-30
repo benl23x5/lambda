@@ -19,7 +19,7 @@ import qualified System.Console.Haskeline       as H
 main :: IO ()
 main 
  = do   -- Load macros from a file in the working directory.
-        macros  <- loadMacros "Prelude.red"
+        macros  <- loadMacros "Prelude.macros"
 
         -- Start the REPL.
         --  We use an external library called "Haskeline" to manage input.
