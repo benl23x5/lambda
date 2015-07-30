@@ -1,0 +1,21 @@
+
+name:           lambda
+version:        1.0.0.0
+license:        PublicDomain
+author:         Ben Lippmeier <benl@ouroborus.net>
+maintainer:     Ben Lippmeier <benl@ouroborus.net>
+cabal-version:  >= 1.6
+stability:      experimental
+category:       Compilers/Interpreters
+synopsis:       An interpreter for lambda calculus with macros.
+build-type:     Simple
+
+executable lambda
+ hs-source-dirs: .
+ build-depends: base, containers, transformers, haskeline
+ main-is:       Main.hs
+
+ ghc-options:   -Wall -Werror -O
+
+ extensions:
+        PatternGuards
