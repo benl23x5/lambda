@@ -13,17 +13,17 @@
    $ ghc --version
 
 
-2. Clone the lambda git repository:
-
-   $ git clone https://github.com/benl23x5/lambda.git
- 
-
-3. Update the cabal package directory.
+2. Update the cabal package directory.
    This gets the list of available libraries from the online Hackage database.
    https://hackage.haskell.org/
 
    $ cabal update
 
+
+3. Clone the lambda git repository:
+
+   $ git clone https://github.com/benl23x5/lambda.git
+ 
 
 4. Install the 'lambda' package.
 
