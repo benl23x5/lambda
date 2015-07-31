@@ -1,0 +1,66 @@
+
+
+1. Install the Haskell Platform.
+   Current version is 7.10.2
+   https://www.haskell.org/platform/
+
+   If this works you should now have the 'ghc', 'ghci' and 'cabal' commands.
+
+   Cabal is the Haskell package manager and build tool.
+
+   You can check the current install ghc version:
+
+   $ ghc --version
+
+
+2. Clone the lambda git repository:
+
+   $ git clone https://github.com/benl23x5/lambda.git
+ 
+
+3. Update the cabal package directory.
+   This gets the list of available libraries from the online Hackage database.
+   https://hackage.haskell.org/
+
+   $ cabal update
+
+
+4. Install the 'lambda' package.
+
+   $ cd lambda
+   $ cabal install
+
+
+4. The executable will be installed in your system, 
+   though the exact place depends on your OS.
+
+   On OSX:   /Users/USER/Library/Haskell/bin
+   On Linux: ~/.cabal/bin
+
+   Add the correct directory to your $PATH.
+
+   The 'cabal' build tool copies the executable to one of the above 
+   installation directories. However, it is also stored locally under
+   dist/build/lambda/lambda
+
+
+5. Run the interpreter.
+   You need to do this from the same directory as the 'Prelude.macros' file
+   so that it can find it.
+  
+   $ lambda
+
+   > (\f. f foo) (\x. x)
+   (\x. x) foo
+   foo
+   [2 steps]
+
+   > #add #one #two
+   (\m. \n. \s. \z. m s (n s z)) #one #two
+   (\n. \s. \z. #one s (n s z)) #two
+   \s. \z. #one s (#two s z)
+   ...
+   \s. \z. s (s (s ((\z. z) z)))
+   \s. \z. s (s (s z))
+   [23 steps]
+
