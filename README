@@ -31,7 +31,7 @@
    $ cabal install
 
 
-4. The executable will be installed in your system, 
+5. The executable will be installed in your system, 
    though the exact place depends on your OS.
 
    On OSX:   /Users/USER/Library/Haskell/bin
@@ -44,7 +44,7 @@
    dist/build/lambda/lambda
 
 
-5. Run the interpreter.
+6. Run the interpreter.
    You need to do this from the same directory as the 'Prelude.macros' file
    so that it can find it.
   
